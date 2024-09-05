@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/Spawn_Container.gd" type="Script" id=1]
+
+[node name="Spawn_Container" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Spawn_Position" type="Node2D" parent="."]
+
+[node name="Position2D" type="Position2D" parent="Spawn_Position"]
+position = Vector2( 1207, 105 )
+
+[node name="Position2D2" type="Position2D" parent="Spawn_Position"]
+position = Vector2( 1207, 205 )
+
+[node name="Position2D3" type="Position2D" parent="Spawn_Position"]
+position = Vector2( 1207, 305 )
+
+[node name="Position2D4" type="Position2D" parent="Spawn_Position"]
+position = Vector2( 1207, 405 )
+
+[node name="Position2D5" type="Position2D" parent="Spawn_Position"]
+position = Vector2( 1207, 505 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
